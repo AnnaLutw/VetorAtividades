@@ -1,0 +1,52 @@
+package vetorMatrizes;
+
+import java.util.Scanner;
+public class atividade1 {
+	
+	public static void media (int[] total) {
+		
+		int  soma = 0, cont = 0;		
+		double media = 0,n = total.length;
+		
+		for(int i =0; i < n; i++) {
+			
+			soma += total[i];
+			
+			
+			
+		
+		}
+		media+= soma/n;
+		System.out.println("A media é"+ media);
+		System.out.println("Alunos em cima da media:" + cont);
+
+	}
+	
+	public static void notas(int[] total) {
+
+		Scanner interno = new Scanner(System.in);
+		
+		
+		for(int al=0; al < total.length; al++) {
+			
+			System.out.println("Digite a nota do aluno: ");		
+			total[al]  = interno.nextInt();
+			
+		}
+		
+	}
+		
+
+	public static void main(String[] args) {
+		Scanner ent = new Scanner(System.in);
+		
+		int [] alunos=new int[10];
+	
+		notas(alunos);
+		
+		media(alunos);
+
+		
+	}
+
+}

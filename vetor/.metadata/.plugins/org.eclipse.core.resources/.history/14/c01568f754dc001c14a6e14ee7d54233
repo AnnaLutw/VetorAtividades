@@ -1,0 +1,21 @@
+package vetorMatrizes;
+
+import java.util.Scanner;
+
+public class atividade5 {
+	public static void preencher(int [][]a, int [][]b) {
+		
+		
+	}
+
+	public static void main(String[] args) {
+		Scanner ent = new Scanner(System.in);
+		
+		int[][] a = new int [4][6];
+		int[][] b = new int [4][6];
+
+		
+		preencher(a,b);
+	}
+
+}

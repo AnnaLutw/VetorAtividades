@@ -1,0 +1,45 @@
+package vetorMatrizes;
+
+import java.util.Scanner;
+public class atividade1 {
+
+	public static void notas(int[] total, int ref, int eu) {
+		Scanner interno = new Scanner(System.in);
+		
+		for(int al=1; al <= total.length; al++) {
+			
+			System.out.printf("A nota é %d [%d] ",eu, al);
+			
+			
+		}
+		
+	}
+		
+		
+	
+
+ 
+
+
+	public static void main(String[] args) {
+		Scanner ent = new Scanner(System.in);
+		
+		int [] alunos=new int[10];
+		int ref;
+		int outro;
+		
+		System.out.println("Digite o numero referencia do aluno: ");
+		ref=ent.nextInt();
+		
+		System.out.println("Digite a nota do aluno: ");		
+		outro  = ent.nextInt();
+		
+		
+		notas(alunos,num, outro);
+		
+		
+		
+		
+	}
+
+}

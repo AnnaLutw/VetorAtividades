@@ -1,0 +1,61 @@
+package vetorMatrizes;
+
+import java.util.Scanner;
+
+public class atividade2 {
+		public static void exibe(int []vetor) {
+			
+			for(int i=0;i <vetor.length; i++) {
+				
+				System.out.println(vetor[i]);
+			}
+			
+		}
+	
+	public static int [] negativos(int[] num) {
+		int neg=0;
+		Scanner interno = new Scanner(System.in);
+		
+		for(int i=0; i < num.length; i++) {
+				
+			if(num[i]<0) {
+				neg++;
+			}
+		}
+		int posNeg = 0;
+		int []negat =new int[neg];
+		
+		for(int i=0; i < num.length; i++) {			
+			
+			if(num[i]<0) {
+				negat[posNeg]= num[i];
+				posNeg++;
+			}
+		}
+						
+			return negat;	
+	}
+				
+	
+	public static void preencher(int [] total) {
+		Scanner interno = new Scanner(System.in);
+		
+		for(int i=0; i < total.length; i++) {			
+			
+			System.out.println("digite algum numero: ");
+			total[i]= interno.nextInt();						
+		}		
+	}
+
+	public static void main(String[] args) {
+		Scanner ent = new Scanner(System.in);
+		
+		int [] x= new int[10];
+		
+		
+		preencher(x);
+		exibe(x);
+		exibe(negativos(x));
+	}
+
+}

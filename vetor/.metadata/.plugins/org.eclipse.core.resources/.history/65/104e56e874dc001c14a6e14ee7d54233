@@ -1,0 +1,84 @@
+package vetorMatrizes;
+
+import java.util.Scanner;
+
+public class atividade6 {
+	public static void troca2(int [][]m){
+	int [][] novo = new int [10][1];
+			
+		for(int i=0; i< m.length; i++) {
+
+			novo[i][0] = m[i][3];										
+		}	
+		for(int  i=0; i< m.length; i++) {			
+		    	 m[i][3]= m[i][9];
+			 
+		}
+		for(int i=0; i< m.length; i++) {
+
+			m[i][9]= novo[i][0];
+		}	
+		}
+	//trocando linha 2 pela 8 
+	public static void troca1 (int [][]m) {
+		int i = 0;
+		//nova matriz com essa linha trocada
+		int [][] novo = new int[1][10];
+
+		//trocando
+		for( i=0; i< m.length; i++) {
+
+			novo[0][i] = m[1][i];										
+		}	
+		for( i=0; i< m.length; i++) {			
+			m[1][i]= m[7][i];
+		}
+		//trocando linha 8 pela 2
+		for( i=0; i< m.length; i++) {
+
+			m[7][i]= novo[0][i];
+		}
+		System.out.println("MATRIZ TROCANDO 2->8");
+		for( i=0; i< m.length; i++) {
+			for( int c=0; c< m[0].length; c++) {
+
+				System.out.print(m[i][c]);
+			}
+			System.out.println();
+		}		
+	}
+	//preenchendo a matriz
+	public static void preencher (int [][]m) {
+		Scanner interno = new Scanner(System.in);
+		int i = 0,c = 0;
+
+		//pedindo os numeros
+		for( i=0; i< m.length; i++) {
+			for( c=0; c< m[0].length; c++) {
+
+				System.out.println("Digite um numero");
+				m[i][c]=interno.nextInt();			
+			}			
+		}
+		//exibindo a matriz
+		for( i=0; i< m.length; i++) {
+			for( c=0; c< m[0].length; c++) {
+
+				System.out.print(m[i][c]);
+			}
+			System.out.println();
+		}
+		System.out.println();
+
+	}
+	public static void main(String[] args) {
+		Scanner ent = new Scanner(System.in);
+		//declarando matriz
+		int [][]m = new int [10][10];
+
+		//passando os procedimentos	
+		preencher(m);
+		troca1(m);
+	}
+
+}

@@ -1,0 +1,79 @@
+package vetorMatrizes;
+
+import java.util.Scanner;
+
+public class atividade4 {
+	public static int diagonalSec(int [][]matriz) {
+		int soma = 0;
+		int pos = matriz.length-1;
+		
+	    for (int i =0;i<matriz.length-1; i++) {
+
+			soma += matriz[i][pos];
+			pos--;
+			
+		    }
+	    
+	    	return(soma);
+	}
+
+	public static int diagonal(int [][]matriz,int so) {
+		
+	    for (int i =0;i<matriz.length; i++) {
+	    	
+			so += matriz[i][i];
+
+	    }
+	    return so;
+	}
+	public static int calc(int [][]matriz, int sub) {
+		
+		for(int i=0; i<matriz.length; i++) {
+			
+			sub += matriz[i][1];
+
+		}
+		return sub;
+
+	}
+	public static int  calcula(int [][]matriz, int s){
+		for(int i=0; i<matriz.length; i++) {
+			
+			s += matriz[3][i];
+			
+		}
+		return s;
+
+	}
+	public static void preencher(int[][]m) {
+		Scanner interno = new Scanner(System.in);
+
+		for(int i=0;i<m.length; i++) {
+			
+			for(int b=0; b<m[0].length;b++) {
+				
+		    	System.out.println("digite os numeros");
+		    	m[i][b]= interno.nextInt();
+			}
+		}		
+	}
+	
+	public static void main(String[] args) {
+		Scanner ent = new Scanner(System.in);
+		
+		int[][]m = new int [5][5];
+		int soma = 0;
+		
+		
+
+		preencher(m);
+		System.out.println(calcula(m, soma));
+		System.out.println(calc(m, soma));
+		System.out.println(diagonal(m, soma));
+		System.out.println(diagonalSec(m, soma));
+
+		
+		
+	
+	}
+}

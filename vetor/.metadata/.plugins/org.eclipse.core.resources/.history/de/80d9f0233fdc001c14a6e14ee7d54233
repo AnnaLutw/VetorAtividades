@@ -1,0 +1,48 @@
+package vetorMatrizes;
+
+import java.util.Scanner;
+
+public class atividade3 {
+	public static void numeros(int[]vet1, int[]vet2) {
+		int[]newVet = new int[20];
+		int impar=0, par=0;
+		
+		for(int i=0; i < newVet.length;i++) {
+			
+			if(i%2==0) {
+				newVet[i]= vet1[par++];
+			}
+			else {
+				newVet[i]=vet2[impar++];
+			}
+		}
+		System.out.println("vetor intercalado: " );
+	}
+	public static void preencher(int []prim, int []seg) {
+		Scanner interno = new Scanner(System.in);
+		int par=0, impar=0;
+
+		for(int i=0;i<prim.length;i++) {
+			
+			System.out.println("Digite os numeros: ");
+			prim[i]=interno.nextInt();					
+			}
+			
+		for(int i=0;i<seg.length;i++) {
+			System.out.println("Digite os numeros do segundo vetor: ");
+			seg[i]=interno.nextInt();	
+		}		
+	}
+
+	public static void main(String[] args) {
+		Scanner ent = new Scanner(System.in);
+		
+		int []x = new int[10];
+		int []y = new int[21];
+
+
+		preencher(x,y);
+		numeros(x,y);
+	}
+
+}

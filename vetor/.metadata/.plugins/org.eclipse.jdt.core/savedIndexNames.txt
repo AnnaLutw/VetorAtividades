@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\anagt\OneDrive\Área de Trabalho\vetor\.metadata\.plugins\org.eclipse.jdt.core
+20471293.index
+1865797976.index
+2228324503.index

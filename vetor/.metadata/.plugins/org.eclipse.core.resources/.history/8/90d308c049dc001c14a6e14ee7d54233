@@ -1,0 +1,30 @@
+package vetorMatrizes;
+
+import java.util.Scanner;
+
+public class atividade4 {
+	public static void preencher(int[][]m) {
+		Scanner interno = new Scanner(System.in);
+
+		for(int i=0;i<m.length; i++) {
+			
+			for(int b=0; b<m[0].length;b++) {
+				
+		    	System.out.println("digite os numeros");
+		    	m[i][b]= interno.nextInt();
+			}
+		}		
+	}
+	
+	public static void main(String[] args) {
+		Scanner ent = new Scanner(System.in);
+		
+		int[][]m = new int [5][5];
+	
+
+		preencher(m);
+		
+		
+	
+	}
+}

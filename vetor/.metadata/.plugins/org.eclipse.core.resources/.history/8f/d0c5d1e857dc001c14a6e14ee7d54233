@@ -1,0 +1,43 @@
+package vetorMatrizes;
+
+import java.util.Scanner;
+
+public class atividade5 {
+	public static int matrizS(int [][]a, int [][]b) {
+		int [][]s = new int [4][6];
+		
+		for(int i=0; i< a.length; i++) {
+			for(int c=0; c< a[0].length; c++) {
+				
+			
+				s[i][c]= a[i][c]+b[i][c];				
+			}
+		}
+		return s;
+	}
+	public static void preencher(int [][]a, int [][]b) {
+		Scanner interno = new Scanner (System.in);
+		
+		for(int i=0; i< a.length; i++) {
+			
+			System.out.println("Digite um numero");
+			a[i][i]=interno.nextInt();					
+
+		}
+			for(int i=0; i< a.length; i++) {
+			
+			System.out.println("Digite um numero");
+			b[i][i]=interno.nextInt();	
+	}
+	}
+	public static void main(String[] args) {
+		Scanner ent = new Scanner(System.in);
+		
+		int[][] a = new int [4][6];
+		int[][] b = new int [4][6];
+
+		preencher(a,b);
+		System.out.println("matriz s "+matrizS(a,b));
+	}
+
+}

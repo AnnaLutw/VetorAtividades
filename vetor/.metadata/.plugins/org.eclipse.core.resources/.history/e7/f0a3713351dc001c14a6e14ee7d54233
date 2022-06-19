@@ -1,0 +1,92 @@
+package vetorMatrizes;
+
+import java.util.Scanner;
+
+public class atividade4 {
+	public static int tudo(int [][]matriz) {
+		int soma = 0;
+		
+	    for (int i =0;i<matriz.length; i++) {
+	    	
+	    	soma+= matriz[5][5];
+	    }
+
+		return soma;
+	}
+
+	public static int diagonalSec(int [][]matriz) {
+		int soma = 0;
+		int pos = matriz.length-1;
+		
+	    for (int i =0;i<matriz.length; i++) {
+
+			soma += matriz[i][pos];
+			pos--;
+			
+		    }
+	    
+	    	return(soma);
+	}
+
+	public static int diagonal(int [][]matriz) {
+		int soma=0;
+	    for (int i =0;i<matriz.length; i++) {
+	    	
+			soma += matriz[i][i];
+
+	    }
+	    return soma;
+	}
+	public static int calc(int [][]matriz) {
+		int soma=0;
+		for(int i=0; i<matriz.length; i++) {
+			
+			soma += matriz[i][1];
+
+		}
+		return soma;
+
+	}
+	public static int  calcula(int [][]matriz){
+		int soma=0;
+		for(int i=0; i<matriz.length; i++) {
+			
+			soma += matriz[3][i];
+			
+		}
+		return soma;
+
+	}
+	public static void preencher(int[][]m) {
+		Scanner interno = new Scanner(System.in);
+
+		for(int i=0;i<m.length; i++) {
+			
+			for(int b=0; b<m[0].length;b++) {
+				
+		    	System.out.println("digite os numeros");
+		    	m[i][b]= interno.nextInt();
+			}
+		}		
+	}
+	
+	public static void main(String[] args) {
+		Scanner ent = new Scanner(System.in);
+		
+		int[][]m = new int [5][5];
+		int soma = 0;
+		
+		
+
+		preencher(m);
+		System.out.println("soma da coluna 4: "+calcula(m));
+		System.out.println("soma da coluna 2: " + calc(m));
+		System.out.println("soma da diagonal: " + diagonal(m));
+		System.out.println("soma da diagonal invertida: "+diagonalSec(m));
+		System.out.println("soma de tudo: "+tudo(m));
+
+		
+		
+	
+	}
+}

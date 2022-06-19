@@ -1,0 +1,49 @@
+package vetorMatrizes;
+
+import java.util.Scanner;
+
+public class atividade2 {
+	public static int negativos(int[] num) {
+		
+		Scanner interno = new Scanner(System.in);
+		
+		for(int i=0; i < num.length; i++) {
+			num[i]=interno.nextInt();
+			
+
+			if( i < 0) {
+		int [] novo = new int [i];
+				i++;
+			}
+			
+			return(num[i]);	
+		}
+
+		}
+				
+	
+	public static void preencher(int [] total) {
+		Scanner interno = new Scanner(System.in);
+		
+		for(int i=0; i < total.length; i++) {			
+			
+			System.out.println("digite algum numero: ");
+			total[i]= interno.nextInt();
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		Scanner ent = new Scanner(System.in);
+
+		
+		int [] x= new int[10];
+		
+		
+		preencher(x);
+		negativos(x);
+		System.out.println(negativos(x));
+
+	}
+
+}

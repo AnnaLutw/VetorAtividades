@@ -1,0 +1,25 @@
+package vetorMatrizes;
+
+import java.util.Scanner;
+
+public class atividade3 {
+	public static void preencher(int []prim) {
+		Scanner interno = new Scanner(System.in);
+
+		for(int i=0;i<prim.length;i++) {
+			
+			System.out.println("Digite os numeros: ");
+			prim[i]=interno.nextInt();	
+		}
+	}
+
+	public static void main(String[] args) {
+		Scanner ent = new Scanner(System.in);
+		
+		int []vet = new int[20];
+		
+
+		preencher(vet);
+	}
+
+}

@@ -1,0 +1,55 @@
+package vetorMatrizes;
+
+import java.util.Scanner;
+
+public class atividade6 {
+	public static void troca (int [][]m) {
+		int tr;
+		int i = 0,c = 0;
+		for( i=0; i< m.length; i++) {
+			for( c=0; c< m[0].length; c++) {
+				
+				tr = m[1][i];
+				m[1][i]= m[7][i];
+				m[7][i]=tr;				
+			}	
+			System.out.println("a troca é: "+m[i][c]);
+
+		}
+
+	}
+
+	public static void preencher (int [][]m) {
+		Scanner interno = new Scanner(System.in);
+		int i = 0,c = 0;
+
+		for( i=0; i< m.length; i++) {
+			for( c=0; c< m[0].length; c++) {
+			
+			System.out.println("Digite um numero");
+			m[i][c]=interno.nextInt();	
+		
+
+			}
+		}
+		for( i=0; i< m.length; i++) {
+			for( c=0; c< m[0].length; c++) {
+				
+				System.out.print(m[i][c]);
+
+			}
+			System.out.println();
+		}
+		
+	}
+	public static void main(String[] args) {
+		Scanner ent = new Scanner(System.in);
+		
+		int [][]m = new int [10][10];
+		
+		
+		preencher(m);
+		troca(m);
+	}
+
+}

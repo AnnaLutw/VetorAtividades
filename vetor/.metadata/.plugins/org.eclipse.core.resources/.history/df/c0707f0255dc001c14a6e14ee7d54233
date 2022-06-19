@@ -1,0 +1,27 @@
+package vetorMatrizes;
+
+import java.util.Scanner;
+
+public class atividade5 {
+	public static void preencher(int [][]a, int [][]b) {
+		Scanner interno = new Scanner (System.in);
+		
+		for(int i=0; i< a.length; i++) {
+			
+			System.out.println("Digite um numero");
+			a[i][i]=interno.nextInt();					
+
+		}
+	}
+
+	public static void main(String[] args) {
+		Scanner ent = new Scanner(System.in);
+		
+		int[][] a = new int [4][6];
+		int[][] b = new int [4][6];
+
+		
+		preencher(a,b);
+	}
+
+}
